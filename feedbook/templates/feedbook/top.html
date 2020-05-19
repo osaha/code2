@@ -1,0 +1,17 @@
+{% extends "feedbook/base.html" %}
+{% block content %}
+
+      <div class="title is-warning">
+        <a href="{% url 'list' %}"> REQUEST BOOKS LIST</a>
+
+          <p><br>
+              some instructions
+          </p><br>
+      </div><hr>
+      <div class="title is-warning">
+        <a href="{% url 'create' %}"> REQUEST</a>
+          <p><br>
+              some instructions
+          </p><br>
+      </div><hr>
+{% endblock %}

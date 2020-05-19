@@ -1,0 +1,16 @@
+{% extends "feedbook/base.html" %}
+
+{% block content %}
+      <div class="tile">
+          <article class="tile is-child notification is-light is-size-4">
+              <table  class="table">
+                  <tr><td>TITLE</td><td>{{ book_request.book}}</td></tr>
+                  <tr><td>AUTHOR</td><td>{{ book_request.book.author}}</td></tr>
+                  <tr><td>REQUEST DATE</td><td>{{ book_request.request_date}}</td></tr>
+                  <tr><td>PUBLISHER</td><td>{{ book_request.book.published_company}}</td></tr>
+                  <tr><td>STATUS</td><td>{{ book_request.status}}</td></tr>
+              </table>
+           </article>
+     </div>
+
+{% endblock %}

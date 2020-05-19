@@ -1,0 +1,21 @@
+{% extends "feedbook/base.html" %}
+{% block content %}
+    <div class="tile">
+    <p class="is-size-3" style="margin-left:20px">REQUESTED BOOKS LIST</p>
+    </div><hr>
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-8">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+           {% for item in object_list %}
+            <article class="tile is-child notification is-light">
+              <p class="title"><a href="{% url 'detail' pk=item.pk %}">{{ item.book.title }}</a></p>
+              <p class="is-size-6">著者　 :　{{ item.book.author }}</p>
+              <p class="is-size-6">リクエスト登録日 :　{{ item.request_date }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

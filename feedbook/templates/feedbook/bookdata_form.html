@@ -1,0 +1,20 @@
+{% extends "feedbook/base.html" %}
+
+{% block content %}
+    <p class="is-size-3" style="margin-left:20px">REGISTER FORM</p>
+    <hr>
+    <div class="tile ">
+
+        <article class="tile is-child notification is-light is-size-4">
+
+            <form method="POST">
+            {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                <a class="button is-primary">
+                <input type="submit" value="REGISTER"></a>
+            </form>
+
+        </article>
+    </div>
+{% endblock %}
