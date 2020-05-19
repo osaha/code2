@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import BookRequest, BookData
-import requests
+
 
 # Create your views here.
 def top(request):
